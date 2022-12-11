@@ -1,0 +1,471 @@
+@import 'config';
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  font-family: 'poppins' sans-serif;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+body{
+  line-height: 1.5rem;
+}
+a{
+  text-decoration: none;
+}
+
+ul{
+  list-style: none;
+}
+
+img{
+  width: 100%;
+}
+.container{
+  max-width: $website-width;
+  padding: 0 1.5rem;
+  margin: auto;
+}
+
+h2{
+  text-align: center;
+  font-size: 2rem;
+  font-family: sans-serif;
+  font-weight: 300;
+  padding: 1rem;
+}
+section{
+  border-bottom: 1.5px solid #fff;
+  padding-top: 5%;
+}
+
+//navbar{
+  header{
+    background: $dark-color;
+    position: fixed;
+    
+    .nav{
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.5rem 0;
+      background: $dark-color;
+    }
+    h4{
+      font-size: 1.3rem;
+      color: $color-five;
+    }
+    i{
+      color: rgb(255, 29, 29);
+    }
+    a{
+      color: $main-color;
+    }
+    ul{
+      display: flex;
+    }
+    li{
+      text-align: center;
+      padding: 0 1rem;
+    }
+    .stay{
+      color: $color-four;
+      border-bottom: 1px solid;
+    border-color: $color-four;  
+    }
+    a{
+      color: $main-color;
+      transition: 0.5s ease;
+      font-size: 0.8rem;
+      font-family: sans-serif;
+      &:hover{
+        color: $color-four;
+      border-bottom: 1px solid;
+    border-color: $color-four;}
+    }
+
+  }
+//showcase
+
+#home{
+  height: 100vh;
+  background: $color-three;
+  background: rgba(0,0,0,0.25) url('/dist/img/showcase.jpg') center right /cover;
+  background-blend-mode: darken;
+ 
+ .showcase-c{
+  text-align: right;
+   padding-top: 7%;
+   padding-left: 6%;
+ }
+ a{
+  background: $color-one;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  margin: 1rem;
+  font-size: 1.1rem;
+  color: $main-color;
+  transition: 0.3s ease-in-out;
+  &:hover{
+    color: $dark-color;
+    background: $color-two;
+  }
+ }
+ h1{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 2.8rem;
+  font-weight: bold;
+  padding: 1rem;
+ }
+h6{
+  text-align: right;
+  font-family: 'poppins';
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
+  color: rgb(158, 50, 50);
+}
+
+
+p{
+  padding: 1rem;
+  color: rgb(1, 1, 31);
+  font-family: sans-serif;
+  font-size: 1.1rem;
+}  
+}
+
+//about
+#about{
+  background: #e2ecf0;
+  
+  img{
+    border-radius: 10px ;
+    border: 0.5px solid $color-four;
+   
+  }
+ 
+  .about-c{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    padding: 1rem;
+  }
+  .about-c2{
+    text-align: left;
+    align-items: center;
+    justify-content: center;
+    padding-top: 1rem;
+  }
+  h3{
+    color: #2b668b;
+    font-size: 1.4rem;
+  }
+  p{
+    font-size: 1.1rem;
+  }
+}
+
+//team
+#team{ background:#eaeff1;
+  
+  .team-c{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+    padding: 2rem;
+  }
+  .hexagon{
+    width: 250px;
+    height: 300px;
+    perspective: 500px;
+  }
+  
+  .hexagon:hover > .shape{
+    cursor: pointer;
+    transform: rotateY(180deg);
+  }
+  
+  .shape{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    transition: 1500ms;
+    transform-style: preserve-3d;
+  }
+  
+  .front,
+  .back{
+    height: 100%;
+    width: 100%;
+    border-radius: 15px;
+    position: absolute;
+    backface-visibility: hidden;
+  }
+  
+  .one{
+    background: url('/dist/img/female1.jpg') center center /cover;
+  }
+  
+  .two{
+    background: url('/dist/img/male1.jpg') center center /cover;
+  }
+  
+  .three{ 
+    background: url('/dist/img/female2.jpg') center center /cover;
+  }
+  
+  .four{
+    background: url('/dist/img/male2.jpg') center center /cover;
+  }
+  
+  .back{
+    background: #5db6ee;
+    border: 1px solid tan;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  h4{
+    font-size: 1.2rem;
+     color: rgb(109, 70, 18);
+  }
+  
+  h5{
+    font-size: 1.2rem;
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  p{
+    text-align: center;
+    font-family: sans-serif;
+    font-style: italic;
+  }
+} 
+
+#second{
+  text-align: center;
+  padding: 1rem;
+
+  h3{
+    font-size: 1.4rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 1rem;
+  }
+  p{
+    font-family: sans-serif;
+    font-style: normal;
+    padding: 1rem;
+    color: rgb(92, 92, 92)
+  }
+}
+
+
+//services
+
+#services{
+  background: #f2f6fa;
+ 
+  .specialties{
+    
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 1.3rem;
+      padding: 3rem;
+  }
+  .box{
+    background: #ccdbe4;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 3px 3px 10px 1px rgba(0,0,0,0.25);
+  }
+  img{
+    border-radius: 10px;
+  }
+  .content{
+    padding-bottom: 1rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  i{
+    background: $color-four;
+    padding: 1rem;
+    border-radius: 50%;
+  }
+  h4{
+    font-family: sans-serif;
+    padding: 1rem;
+    color: $dark-color;
+  }
+  p{
+    font-size: 1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+}
+
+//wrapper
+#wrap{
+  background:rgba(0,0,0,0.6)  url('/dist/img/hosp\ building.jpg') center center /cover;
+  background-blend-mode: darken;
+}
+
+#wrapper{
+  .wrapper{
+    border: 1px solid transparent;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 1rem ;
+    
+  }
+  .contain{
+    width: 25vmin;
+    height: 25vmin;
+    border: 1px solid navy;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 1rem 0;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    border-bottom: 5px solid navy;
+    text-align: center;
+    
+  }
+  span.num{
+    color: white;
+    font-size: 3rem;
+  }
+  span.text{
+    color: rgb(145, 131, 114);
+    font-size: 1.4rem;
+  }
+}
+
+
+
+
+//contact
+
+#contact{
+  background: #fbfcfd;
+  .contact-c{
+    
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem;
+  }
+  form, iframe{
+    flex: 1;
+  }
+
+iframe{
+  height: auto;
+  border-radius: 5px;
+}
+  
+  label{
+    display: block;
+  }
+  input{
+    width: 60%;
+    padding: 0.5rem;
+    margin-top: 10px;
+    border-radius: 7px;
+    border: 1px solid $color-four;
+    border-bottom: 3px solid $color-three;
+
+  }
+  textarea{
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 10px;
+    border-radius: 10px;
+    border: 1px solid $color-four;
+    border-bottom: 4px solid $color-three;
+  }
+  a{
+    background: $color-three;
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    margin: 1rem;
+    font-size: 1.1rem;
+    color: $dark-color;
+    transition: 0.3s ease-in-out;
+    &:hover{
+      color: $main-color;
+      background: $color-one;
+    }
+  }
+}
+
+//footer
+footer{
+  background-color: $dark-color;
+  color: $main-color;
+  padding: 0.5rem;
+  
+  h3{
+    font-family: sans-serif;
+    color: rgb(167, 165, 164);
+    text-align: center;
+    padding: 0.5rem;
+    font-size: 1.1rem;
+  }
+  .social-media{
+    text-align: center;
+    padding-bottom: 0.5rem;
+  }
+  a{
+  background: $color-one;
+  padding: 0.5rem;
+  border-radius: 50%;
+  color: $main-color;
+  transition: 0.3s ease-in-out;
+  &:hover{
+    color: $dark-color;
+    background: $color-two;
+    }
+  }
+  .icons{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 0.5rem;
+    text-align: center;
+  }
+  h5{
+    color: #9999;
+    text-align: center;
+  }
+  p{
+    font-family: sans-serif;
+  }
+  .p{
+    color: rgb(190, 102, 117);
+  }
+}
+
+@import 'media'
+
+
+
+
+
+

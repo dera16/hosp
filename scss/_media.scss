@@ -1,0 +1,16 @@
+@media(max-width:800px){
+  #showcase{
+    .showcase-c{
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    p{
+      visibility: collapse;
+    }
+    h1, h4{
+      text-align: center;
+    }
+  }
+ 
+}
