@@ -46,12 +46,14 @@ section{
 //navbar{
   header{
     background: $dark-color;
+    width: 100%;
     position: fixed;
+   
+    z-index: 9999;
     
+
     .nav{
-      position: fixed;
-      top: 0;
-      left: 0;
+      
       width: 100%;
       display: flex;
       justify-content: space-between;
@@ -91,6 +93,8 @@ section{
       border-bottom: 1px solid;
     border-color: $color-four;}
     }
+
+   
 
   }
 //showcase

@@ -1,10 +1,27 @@
 
+  const body = document.body;
+let lastScroll = 0;
+
+window.addEventListener('scroll', () =>{
+  const currentScroll = (window.pageYOffset)
+   if (currentScroll <= 0){
+    body.classList.remove("scroll-up")
+   }
+
+   if(currentScroll > lastScroll && !body.classList.contains("scroll-down")){
+    body.classList.remove("scroll-up")
+    body.classList.add("scroll-down")
+   }
+
+   lastScroll = currentScroll
+     
+})
 
 
 //typewriter
 var i=0;
 var txt = ' "Your Health,our Priority..." Book an Appointment today!';
-var speed = 100;
+var speed = 88;
 function type(){
   document.getElementById("type").innerHTML +=txt.charAt(i);
 
@@ -29,6 +46,8 @@ valueDisplays.forEach(valueDisplay  => {
     }
   }, duration)
 });
+
+
  
 
 // swiper
